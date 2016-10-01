@@ -3,12 +3,12 @@
 #include "BattleTank.h"
 #include "TankBarrel.h"
 
-void UTankBarrel::Elevate(float degreesPerSecond)
+void UTankBarrel::Elevate(float relativeSpeed)
 {
 	// move the barrel ethee right amoiunt this frame
 
 
 	// given a max elevation speed, and the frame time
 
-	UE_LOG(LogTemp, Warning, TEXT("Barrel.Elevate Called %f"), degreesPerSecond);
+	UE_LOG(LogTemp, Warning, TEXT("Barrel.Elevate Called %f"), relativeSpeed);
 }

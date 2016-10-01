@@ -43,11 +43,14 @@ void UTankAimingComponent::AimAt(FVector hitLocation, float launchSpeed)
 	{
 		auto aimDirection = outLaunchVelocity.GetSafeNormal();
 		MoveBarrelTowards(aimDirection);
-		//get the actual rotation
-		//calculate the difference
-		//set the new relative rotation
+		auto time = GetWorld()->GetTimeSeconds();
+		UE_LOG(LogTemp, Warning, TEXT("%f : aim solve found"), time);
 	}
-
+	else
+	{
+		auto time = GetWorld()->GetTimeSeconds();
+		UE_LOG(LogTemp, Warning, TEXT("%f : no aim solve found"), time);
+	}
 }
 
 void UTankAimingComponent::MoveBarrelTowards(FVector aimDirection)
