@@ -36,6 +36,9 @@ void UTankAimingComponent::AimAt(FVector hitLocation, float launchSpeed)
 		startLocation,
 		hitLocation,
 		launchSpeed,
+		false,
+		0,
+		0,
 		ESuggestProjVelocityTraceOption::DoNotTrace
 	);
 
